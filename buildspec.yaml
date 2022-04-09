@@ -14,8 +14,8 @@ phases:
     - echo Building the Docker image...
     - set
     - export
-    - echo "repository url: $REPOSITORY_URL"
-    - echo "image tag: $IMAGE_TAG"
+    - echo repository url: $REPOSITORY_URL
+    - echo image tag: $IMAGE_TAG
     - docker build -t $REPOSITORY_URL:latest .
     - docker tag $REPOSITORY_URL:latest $REPOSITORY_URL:$IMAGE_TAG
   post_build:
