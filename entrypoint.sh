@@ -6,7 +6,7 @@ done
 
 export DB_USER=${username}
 export DB_PASS=${password}
-export DB_HOST=${host}
+export DB_HOST=$(echo ${host} | awk -F: '{print $1}')
 export DB_PORT=${port}
 export DB_NAME=todo
 
