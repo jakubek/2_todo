@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 set -e
 for s in $( jq -r "to_entries|map(\"\(.key)=\(.value|tostring)\")|.[]" /mnt/secrets/*); do
     export $s
