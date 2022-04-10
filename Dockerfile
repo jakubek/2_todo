@@ -3,6 +3,7 @@ FROM python:3.9-alpine
 ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /requirements.txt
+COPY ./entrypoint.sh /entrypoint.sh
 
 RUN apk add --no-cache mariadb-connector-c-dev bash jq
 RUN apk add --update --no-cache mysql-client
